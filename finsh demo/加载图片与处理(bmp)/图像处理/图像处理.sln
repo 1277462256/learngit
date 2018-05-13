@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "图像处理", "图像处理\图像处理.vcxproj", "{804A612B-409C-465F-84F5-F8E3FBA20403}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project3", "..\..\..\..\Documents\Visual Studio 2013\Projects\10\21\Project3\Project3.vcxproj", "{0466D29F-38D4-41A6-8E50-805941D426BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{804A612B-409C-465F-84F5-F8E3FBA20403}.Debug|Win32.ActiveCfg = Debug|Win32
+		{804A612B-409C-465F-84F5-F8E3FBA20403}.Debug|Win32.Build.0 = Debug|Win32
+		{804A612B-409C-465F-84F5-F8E3FBA20403}.Release|Win32.ActiveCfg = Release|Win32
+		{804A612B-409C-465F-84F5-F8E3FBA20403}.Release|Win32.Build.0 = Release|Win32
+		{0466D29F-38D4-41A6-8E50-805941D426BA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0466D29F-38D4-41A6-8E50-805941D426BA}.Debug|Win32.Build.0 = Debug|Win32
+		{0466D29F-38D4-41A6-8E50-805941D426BA}.Release|Win32.ActiveCfg = Release|Win32
+		{0466D29F-38D4-41A6-8E50-805941D426BA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

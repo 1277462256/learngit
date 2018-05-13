@@ -1,0 +1,240 @@
+html {
+	font-family: "OpenSansRegular", Arial, sans-serif; font-size: 15px;
+}
+button {
+	font-family: "OpenSansRegular", Arial, sans-serif; font-size: 15px;
+}
+input {
+	font-family: "OpenSansRegular", Arial, sans-serif; font-size: 15px;
+}
+select {
+	font-family: "OpenSansRegular", Arial, sans-serif; font-size: 15px;
+}
+textarea {
+	font-family: "OpenSansRegular", Arial, sans-serif; font-size: 15px;
+}
+a {
+	margin: 0px 2px; transition:0.4s ease-out; text-decoration: none; -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out;
+}
+a:hover {
+	transition:0.2s ease-out; -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out;
+}
+p {
+	margin: 0px 0px 1.5em;
+}
+pre {
+	margin: 0px 0px 1.5em;
+}
+blockquote {
+	margin: 0px 0px 1.5em; padding: 0px 1.5em; font-family: "OpenSansItalic";
+}
+b {
+	font-family: "OpenSansBold"; font-style: normal; font-weight: normal;
+}
+strong {
+	font-family: "OpenSansBold"; font-style: normal; font-weight: normal;
+}
+i {
+	font-family: "OpenSansItalic"; font-style: normal;
+}
+cite {
+	font-family: "OpenSansItalic"; font-style: normal;
+}
+em {
+	font-family: "OpenSansItalic"; font-style: normal;
+}
+var {
+	font-family: "OpenSansItalic"; font-style: normal;
+}
+address {
+	font-family: "OpenSansItalic"; font-style: normal;
+}
+dfn {
+	font-family: "OpenSansItalic"; font-style: normal;
+}
+h1 {
+	font-size: 3.75em;
+}
+h2 {
+	font-size: 1.75em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.4em;
+}
+h5 {
+	font-size: 1.25em;
+}
+h6 {
+	font-size: 1.1em;
+}
+h1 {
+	margin: 0.75em 0px 0.25em; font-family: "BandaRegular", Arial, sans-serif; font-weight: normal;
+}
+h2 {
+	margin: 0.75em 0px 0.25em; font-family: "BandaRegular", Arial, sans-serif; font-weight: normal;
+}
+h3 {
+	margin: 0.75em 0px 0.25em; font-family: "BandaRegular", Arial, sans-serif; font-weight: normal;
+}
+h4 {
+	margin: 0.75em 0px 0.25em; font-family: "BandaRegular", Arial, sans-serif; font-weight: normal;
+}
+h5 {
+	margin: 0.75em 0px 0.25em; font-family: "BandaRegular", Arial, sans-serif; font-weight: normal;
+}
+h6 {
+	margin: 0.75em 0px 0.25em; font-family: "BandaRegular", Arial, sans-serif; font-weight: normal;
+}
+.content {
+	line-height: 1.6; -ms-word-break: break-all; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;
+}
+.title-font {
+	font: 126px/126px "Sofia", Arial, sans-serif; margin: 0.5em 0px; word-spacing: -14px; font-size-adjust: none; font-stretch: normal;
+}
+@media all and (max-width:1030px) and (min-width:601px)
+{
+.title-font {
+	font: 100px/100px "Sofia", Arial, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+}
+.tagline-font {
+	font: 36px/50px "OpenSansLight", Arial, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+.nav-font {
+	font: 45px/55px "Matchbook", Arial, sans-serif; letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.works-font {
+	font: 58px/60px "Matchbook", Arial, sans-serif; margin: 0px; letter-spacing: -3px; font-size-adjust: none; font-stretch: normal;
+}
+@media all and (max-width:600px)
+{
+.title-font {
+	font: 40px/100px "Sofia", Arial, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+.nav-font {
+	letter-spacing: -2px; font-size: 48px;
+}
+.tagline-font {
+	font: 24px/37px "BandaRegular", Arial, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+}
+.about-font {
+	font: 20px/30px "BandaRegular", Arial, sans-serif; text-align: justify; font-size-adjust: none; font-stretch: normal;
+}
+.about-font p {
+	margin-top: 0px;
+}
+.sidebar-font {
+	font: 126px/normal "Sofia", Arial, sans-serif; margin: 0px; font-size-adjust: none; font-stretch: normal; text-shadow: 4px 3px 0px rgb(102,76,62);
+}
+@media all and (max-width:1050px) and (min-width:801px)
+{
+.sidebar-font {
+	line-height: 238px; font-size: 214px;
+}
+}
+@media all and (max-width:800px)
+{
+.sidebar-font {
+	line-height: 61px; font-size: 58px;
+}
+}
+.post .prev-next {
+	margin-top: 8px;
+}
+.twitter-stream {
+	text-align: left;
+}
+.tweets p {
+	margin: 0px 0px 1em;
+}
+.entry-title-font {
+	margin: 0px; font-size: 38px;
+}
+@media all and (max-width:480px)
+{
+.entry-title-font {
+	margin: 0px; font-size: 28px;
+}
+}
+@media all and (min-width:801px)
+{
+.gallery-header .entry-title-font {
+	font-size: 62px;
+}
+}
+.blog-categories .entry-title-font {
+	font-size: 28px;
+}
+.entry-title-font a {
+	margin: 0px; border: currentColor;
+}
+.meta-info-font {
+	margin: 0px; font-family: "OpenSansItalic", Arial, sans-serif; font-size: 13px;
+}
+figcaption {
+	margin: 0px; font-family: "OpenSansItalic", Arial, sans-serif; font-size: 13px;
+}
+@media all and (min-width:1401px)
+{
+.post .content {
+	font-family: "OpenSansRegular", Arial, sans-serif; font-size: 19px;
+}
+.post .meta-info-font {
+	font-family: "OpenSansItalic", Arial, sans-serif; font-size: 16px;
+}
+.post figcaption {
+	font-family: "OpenSansItalic", Arial, sans-serif; font-size: 16px;
+}
+.post .entry-title-font {
+	font-size: 62px; margin-bottom: 10px;
+}
+}
+.post .content > p:first-child {
+	font-family: "OpenSansLight"; font-size: 1.2em;
+}
+.blog-excerpts .content p {
+	margin: 0px 0px 4px; line-height: 1.4;
+}
+.blog-categories p {
+	margin: 0px 0px 4px; line-height: 1.4;
+}
+.post header {
+	padding: 0px 20px; text-align: center; margin-bottom: 30px;
+}
+.image header {
+	padding: 0px 20px; text-align: center; margin-bottom: 30px;
+}
+.post-excerpt header {
+	margin-bottom: 13px;
+}
+.post header h2 {
+	margin-bottom: 5px;
+}
+.post .content {
+	margin-bottom: 40px;
+}
+.post-excerpt .content p {
+	margin: 0px;
+}
+@media all and (max-width:1400px) and (min-width:1021px)
+{
+.two-column {
+	column-count: 2; column-gap: 42px; -moz-column-count: 2; -moz-column-gap: 42px; -webkit-column-count: 2; -webkit-column-gap: 42px;
+}
+}
+.gallery-header {
+	padding: 45px 10px 22px; text-align: center;
+}
+.description header {
+	margin: -6px 0px 2em;
+}
+.site-footer {
+	text-align: center;
+}
+.site-footer-font {
+	font: 13px/20px "OpenSansLight", Arial, sans-serif; font-size-adjust: none; font-stretch: normal;
+}

@@ -1,0 +1,202 @@
+﻿
+
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+
+<title>圣诞祝福网页</title>
+<link rel="stylesheet" href="css/buttons.css">
+<style type="text/css">
+body {
+	background-color:#000044;
+	background:url(./images/bj.jpg) repeat-x;
+	margin:0px;
+	overflow:hidden;
+}
+a {
+	color:#0078ff;
+}
+.cs{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	position: absolute;
+	text-align:center;
+    font-family:微软雅黑;
+	color:rgba(255, 16, 34, 0.48);
+}
+img#logo {
+    width: 128px;
+    background-size: cover;
+    border-radius: 200px;
+    box-shadow: 0px 0px 40px rgba(63, 81, 181, 0.72);
+    border: 3px solid #00a0ff;
+    opacity: 1;
+    margin: 0 auto;
+    margin-top: 20px;
+	margin-bottom: 20px;
+	transition: all 1.0s;  
+}
+#logo:hover {
+    box-shadow: 0 0 10px #fff;
+    -webkit-box-shadow: 0 0 19px #fff;
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg); 	/* IE 9 */
+    -moz-transform:rotate(360deg); 	/* Firefox */
+    -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+    -o-transform:rotate(360deg); 	/* Opera */
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+body{cursor:url(./images/Link.cur),default;}
+a:hover,li:hover,img:hover{cursor:url(./images/Regular.cur),pointer;}
+</style>
+
+</head>
+<body onLoad="init()">
+<div class="cs">
+<img src="tx.jpg" id="logo">
+<br><br><br>
+<h1 style=" color:#3FF">圣诞节快乐</h1>
+<h2 style=" color:#3FF">祝你享尽圣诞佳节的快乐和圣诞的礼品。</h2>
+<a href="http://wpa.qq.com/msgrd?v=3&uin=1277462256&site=qq&menu=yes" target="_blank" class="button button-glow button-border button-rounded button-primary">联系我吧</a>
+</div>
+<div id="MagicFace" style="position: absolute; z-index: 999;">
+<script src="js/christmas.js"></script>
+</div>
+<script type="text/javascript" src="js/threecanvas.js"></script>
+<script type="text/javascript" src="js/snow.js"></script>
+<script type="text/javascript">
+var SCREEN_WIDTH = window.innerWidth;
+var SCREEN_HEIGHT = window.innerHeight;
+
+var container;
+
+var particle;
+
+var camera;
+var scene;
+var renderer;
+
+var mouseX = 0;
+var mouseY = 0;
+
+var windowHalfX = window.innerWidth / 2;
+var windowHalfY = window.innerHeight / 2;
+
+var particles = []; 
+var particleImage = new Image();//THREE.ImageUtils.loadTexture( "img/ParticleSmoke.png" );
+particleImage.src = 'images/ParticleSmoke.png'; 
+
+
+
+function init() {
+
+	container = document.createElement('div');
+	document.body.appendChild(container);
+
+	camera = new THREE.PerspectiveCamera( 75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
+	camera.position.z = 1000;
+
+	scene = new THREE.Scene();
+	scene.add(camera);
+		
+	renderer = new THREE.CanvasRenderer();
+	renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+	var material = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage) } );
+		
+	for (var i = 0; i < 500; i++) {
+
+		particle = new Particle3D( material);
+		particle.position.x = Math.random() * 2000 - 1000;
+		particle.position.y = Math.random() * 2000 - 1000;
+		particle.position.z = Math.random() * 2000 - 1000;
+		particle.scale.x = particle.scale.y =  1;
+		scene.add( particle );
+		
+		particles.push(particle); 
+	}
+
+	container.appendChild( renderer.domElement );
+
+
+	document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+	document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+	document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+	
+	setInterval( loop, 1000 / 60 );
+	
+}
+
+function onDocumentMouseMove( event ) {
+
+	mouseX = event.clientX - windowHalfX;
+	mouseY = event.clientY - windowHalfY;
+}
+
+function onDocumentTouchStart( event ) {
+
+	if ( event.touches.length == 1 ) {
+
+		event.preventDefault();
+
+		mouseX = event.touches[ 0 ].pageX - windowHalfX;
+		mouseY = event.touches[ 0 ].pageY - windowHalfY;
+	}
+}
+
+function onDocumentTouchMove( event ) {
+
+	if ( event.touches.length == 1 ) {
+
+		event.preventDefault();
+
+		mouseX = event.touches[ 0 ].pageX - windowHalfX;
+		mouseY = event.touches[ 0 ].pageY - windowHalfY;
+	}
+}
+
+//
+
+function loop() {
+
+for(var i = 0; i<particles.length; i++)
+	{
+
+		var particle = particles[i]; 
+		particle.updatePhysics(); 
+
+		with(particle.position)
+		{
+			if(y<-1000) y+=2000; 
+			if(x>1000) x-=2000; 
+			else if(x<-1000) x+=2000; 
+			if(z>1000) z-=2000; 
+			else if(z<-1000) z+=2000; 
+		}				
+	}
+
+	camera.position.x += ( mouseX - camera.position.x ) * 0.05;
+	camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
+	camera.lookAt(scene.position); 
+
+	renderer.render( scene, camera );
+
+	
+}
+</script>
+
+<audio autoplay="autoplay" loop="loop">
+<source src="http://p2.music.126.net/eKmyz2-WnvAT_a7HdkwoxA==/3438172865772138.mp3" type="audio/mpeg">
+</audio>
+<script type="text/javascript" src="js/count.js"></script>
+<div style="display:none"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3568997ab3a480640571c3fd2c7a949b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></div></body>
+</html>
